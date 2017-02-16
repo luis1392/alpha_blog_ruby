@@ -74,4 +74,21 @@ Another method to do the same:
 article = Article.create(title: "This is a test title", description: "This is a test description") # This will hit the table right away without needing the article.save line
 
 
+To find an article with id 2 and edit it's title:
+
+article = Article.find(2) # Here assumption is article with id of 2 was being looked for
+
+article.title = "This is an edited title"
+
+article.save
+
+To delete an article, example with id 5:
+
+article = Article.find(5)
+
+article.destroy
+
+
+
+
 
