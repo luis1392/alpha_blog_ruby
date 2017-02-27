@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :articles #relacion en la cual un articulo pertenece a un usuario
+  has_many :articles, dependent: :destroy #relacion en la cual un articulo pertenece a un usuario
   before_save { self.email = email.downcase } #antes de guadar el valor 
   validates :username, presence: true, uniqueness: { case_sensitive: false}, 
             length: {minimum: 3, maximum: 25}
