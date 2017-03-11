@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class CreateCategoriesTest < ActionDispatch::IntegrationTest
+class ListCategoriesTest < ActionDispatch::IntegrationTest
   
   def setup #creamos 2 categorias por defecto
-    @category = Category.create(name:  "animals")
-    @category2 = Category.create(name:  "programming")
+    @category = Category.create(name:  "sports")
+    @category2 = Category.create(name: "programming")
   end
 
   test "should show categories listing" do
